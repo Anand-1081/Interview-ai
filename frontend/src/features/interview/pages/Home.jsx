@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router'
 
 const Home = () => {
 
-    const { loading, generateReport,reports } = useInterview()
+    const { loading, generateReport, reports, error } = useInterview()
     const [ jobDescription, setJobDescription ] = useState("")
     const [ selfDescription, setSelfDescription ] = useState("")
     const [resumeFile, setResumeFile] = useState(null)
@@ -38,7 +38,12 @@ const Home = () => {
     }
 
     const data = await generateReport({ title , jobDescription, selfDescription, resumeFile })
-    navigate(`/interview/${data._id}`)
+
+    if (data) {
+        navigate(`/interview/${data._id}`)
+    } else {
+        alert("Something went wrong generating your report. Please try again.")
+    }
 }
 
     if (loading) {
@@ -57,6 +62,8 @@ const Home = () => {
                 <h1>Create Your Custom <span className='highlight'>Interview Plan</span></h1>
                 <p>Let our AI analyze the job requirements and your unique profile to build a winning strategy.</p>
             </header>
+
+            {error && <p className="error-message">{error}</p>}
 
             {/* Main Card */}
             <div className='interview-card'>

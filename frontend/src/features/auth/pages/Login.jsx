@@ -5,19 +5,19 @@ import { useAuth } from '../hooks/useAuth'
 
 const Login = () => {
 
-    const { loading, handleLogin } = useAuth()
+    const { loading, handleLogin, error } = useAuth()
     const navigate = useNavigate()
 
     const [ email, setEmail ] = useState("")  // used for tow way binding
     const [ password, setPassword ] = useState("")
 
-   
-const handleSubmit = async (e) => {
-    e.preventDefault()
-    const success = await handleLogin({ email, password })
-    if (success) navigate('/')
-    else alert("Invalid email or password") // or a proper error state
-}
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        const success = await handleLogin({email,password})
+        if (success) {
+            navigate('/')
+        }
+    }
 
     if(loading){
         return (<main><h1>Loading.......</h1></main>)
@@ -28,6 +28,7 @@ const handleSubmit = async (e) => {
         <main>
             <div className="form-container">
                 <h1>Login</h1>
+                {error && <p className="error-message">{error}</p>}
                 <form onSubmit={handleSubmit}>
                     <div className="input-group">
                         <label htmlFor="email">Email</label>

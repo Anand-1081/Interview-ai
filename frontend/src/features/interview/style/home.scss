@@ -394,3 +394,8 @@ $font-stack:     system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Robot
         }
     }
 }
+.error-message {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin: 0.5rem 0 1rem;
+}
