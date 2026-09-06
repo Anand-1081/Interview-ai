@@ -2,11 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/Anand-1081/Interview-ai/main/frontend/public/logo.png" alt="Interview AI Logo" width="100%" />
 
-# 🤖 Interview AI
 
-### Your AI-Powered Interview Preparation Partner
-
-*Analyze your resume, match it to any job, and walk into your interview prepared.*
 
 [![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Visit_App-6C63FF?style=for-the-badge)](https://interview-ai-ch1e.vercel.app/login)
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
