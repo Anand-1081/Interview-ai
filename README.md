@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/Anand-1081/Interview-ai/main/frontend/public/logo.png" alt="Interview AI Logo" width="120" />
+<img src="https://raw.githubusercontent.com/Anand-1081/Interview-ai/main/frontend/public/logo.png" alt="Interview AI Logo" width="100%" />
 
 # 🤖 Interview AI
 
