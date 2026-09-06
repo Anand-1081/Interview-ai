@@ -15,7 +15,7 @@ const Register = () => {
         e.preventDefault()
         const success = await handleRegister({username,email,password})
         if (success) {
-            navigate("/")
+            navigate("/login")
         }
     }
 
