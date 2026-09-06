@@ -11,11 +11,13 @@ const Login = () => {
     const [ email, setEmail ] = useState("")  // used for tow way binding
     const [ password, setPassword ] = useState("")
 
-    const handleSubmit = async (e) => {
-        e.preventDefault()
-        await handleLogin({email,password})
-        navigate('/')
-    }
+   
+const handleSubmit = async (e) => {
+    e.preventDefault()
+    const success = await handleLogin({ email, password })
+    if (success) navigate('/')
+    else alert("Invalid email or password") // or a proper error state
+}
 
     if(loading){
         return (<main><h1>Loading.......</h1></main>)
