@@ -2,8 +2,8 @@ import axios from "axios"
 
 // creating axios instance
 const api = axios.create({
-    baseURL: "http://localhost:3000",
-    withCredentials: true   //  flag -- give permision to server to read data and set the data in cookies
+    baseURL: import.meta.env.VITE_API_URL || "http://localhost:3000",
+    withCredentials: true,
 })
 
 export async function register({ username, email, password }) {
